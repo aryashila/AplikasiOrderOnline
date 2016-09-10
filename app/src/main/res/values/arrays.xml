@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="cabang">
+        <item>Jl.Soekarno Hatta No.50</item>
+        <item>Jl.Kawi No.7</item>
+        <item>Jl. Majapahit No.99</item>
+        <item>Jl. Sawojajar 1</item>
+    </string-array>
+</resources>
