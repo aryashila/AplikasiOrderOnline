@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void doProcess() {
 
-
+        if (isValid())
         {
             String nama = etNama.getText().toString();
             String alamat = etAl.getText().toString();
@@ -199,5 +199,47 @@ public class MainActivity extends AppCompatActivity {
         return total1 + total2 + total3 + total4 + total5;
     }
 
+    private boolean isValid() {
 
+        boolean valid = true;
+
+        String nama = etNama.getText().toString();
+        String alamat = etAl.getText().toString();
+        String nomer = etNH.getText().toString();
+        String cumi = etCumi.getText().toString();
+        String udang = etUdang.getText().toString();
+        String kepiting = etKepiting.getText().toString();
+        String kerang = etKerang.getText().toString();
+        String ikan = etIkan.getText().toString();
+        if (nama.isEmpty()) {
+            etNama.setError("Nama Belum diisi");
+            valid = false;
+        } else if (nama.length() < 3) {
+            etNama.setError("Nama minimal 3 karakter");
+            valid = false;
+        } else {
+            etNama.setError(null);
+        }
+
+        if (alamat.isEmpty()) {
+            etAl.setError("Alamat belum diisi");
+
+            valid = false;
+        } else {
+            etAl.setError(null);
+        }
+
+        if (nomer.isEmpty()) {
+            etNH.setError("Masukan nomer telepon Anda");
+            valid = false;
+        } else if (nomer.length() < 12) {
+            etNH.setError("Format nomer kurang dari 12 digit");
+            valid = false;
+        } else {
+            etNH.setError(null);
+        }
+
+
+        return valid;
+    }
 }
